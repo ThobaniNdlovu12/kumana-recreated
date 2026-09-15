@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Gallery - Kumana</title>
+<meta name="description" content="A gallery of Kumana's work across architecture, urban design, event spaces, creative direction, and objects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<div class="blueprint-grid" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="mark logo-font" style="cursor:pointer;">KUMANA</a>
+    <nav>
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#vision">Vision</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="index.html#thinking">Thinking</a>
+      <a href="index.html#collaborations">Collaborations</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- GALLERY HERO -->
+  <section class="gallery-hero wrap">
+    <span class="tag">Gallery</span>
+    <h1 class="section-title">Every project, one place.</h1>
+    <p style="color:var(--stone-dim); max-width:56ch; margin-top:var(--space-xs);">Filter by discipline, or browse everything at once. Click any project to step through its photos.</p>
+
+    <div class="gallery-filters" role="tablist" aria-label="Filter projects by discipline">
+      <button class="gfilter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="gfilter" data-filter="arc" role="tab" aria-selected="false">Architecture</button>
+      <button class="gfilter" data-filter="urb" role="tab" aria-selected="false">Urban</button>
+      <button class="gfilter" data-filter="evt" role="tab" aria-selected="false">Events</button>
+      <button class="gfilter" data-filter="dir" role="tab" aria-selected="false">Direction</button>
+      <button class="gfilter" data-filter="obj" role="tab" aria-selected="false">Objects</button>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID (populated by gallery.js) -->
+  <section class="gallery-section wrap">
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="label">Get in touch</span>
+        <h2>Let's build something worth telling.</h2>
+        <p style="color:var(--stone-dim); max-width:44ch; margin-top:0.8rem;">Pick the option that fits - it opens your own email app with the right person already in the "to" field and the subject filled in. You write the message.</p>
+        <div class="cta-row" style="margin-top:var(--space-s); flex-direction:column; align-items:flex-start;">
+          <a class="cta-btn" href="mailto:clients@kumana.studio?subject=I%20want%20to%20become%20a%20client">I want to become a client</a>
+          <a class="cta-btn ghost" href="mailto:queries@kumana.studio?subject=I%20just%20have%20a%20question">I just have a question</a>
+        </div>
+      </div>
+      <div class="col">
+        <span class="label">Contact</span>
+        <a href="mailto:hello@kumana.studio">hello@kumana.studio</a>
+        <a href="tel:+27000000000">+27 00 000 0000</a>
+      </div>
+      <div class="col">
+        <span class="label">Studio</span>
+        <p>Durban, South Africa</p>
+        <a href="https://www.instagram.com/kumana.co/">Instagram</a>
+        <a href="https://www.linkedin.com/company/kumanacollective/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span class="logo-font">© 2026 KUMANA STUDIO</span>
+      <span>KULTURE · MAKING · NARRATIVES</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- LIGHTBOX (populated by gallery.js) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+  <div class="lightbox-box" role="dialog" aria-modal="true" aria-label="Project images">
+    <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Previous image">←</button>
+    <div class="lb-stage">
+      <img id="lb-image" src="" alt="">
+      <div class="lb-empty" id="lb-empty">Photos coming soon.</div>
+    </div>
+    <button class="lb-arrow lb-next" id="lb-next" aria-label="Next image">→</button>
+    <div class="lb-caption">
+      <span class="lb-code" id="lb-code"></span>
+      <h4 id="lb-title"></h4>
+      <span class="lb-count" id="lb-count"></span>
+    </div>
+  </div>
+</div> 
+
+<script src="script.js"></script>
+<script src="gallery.js"></script>
+
+</body>
+</html>
