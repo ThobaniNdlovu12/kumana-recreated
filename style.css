@@ -135,8 +135,8 @@
     min-height:100svh;
     position:relative;
     display:flex;
-    align-items:flex-end;
-    padding-top:var(--space-xl); padding-bottom:var(--space-l);
+    align-items:center;
+    padding-top:clamp(8rem, 15vh, 11rem); padding-bottom:var(--space-l);
     overflow:hidden;
     isolation:isolate;
   }
@@ -163,27 +163,19 @@
     background:linear-gradient(180deg, rgba(28,27,25,0.55) 0%, rgba(28,27,25,0.75) 55%, rgba(28,27,25,0.92) 100%);
   }
 
-  .hero-copy{ position:relative; max-width:56ch; }
-  .hero-copy .label{ margin-bottom:var(--space-s); display:block; }
+  .hero-copy{ position:relative; max-width:72rem; }
   .hero h1{
-    font-size:clamp(2.1rem, 1.6rem + 3vw, 3.9rem);
-    max-width:13ch;
+    font-size:clamp(3.4rem, 2rem + 5.5vw, 7rem);
+    max-width:12ch;
+    line-height:0.95;
   }
   .hero h1 .pop{ color:var(--rust-bright); }
   .hero p.deck{
-    margin-top:var(--space-s); max-width:42ch;
-    color:var(--stone-dim); font-size:0.92rem;
-    min-height:6.6em;
+    margin-top:var(--space-m); max-width:62ch;
+    color:var(--stone); font-size:clamp(1.05rem, 0.9rem + 0.45vw, 1.35rem);
+    line-height:1.55;
     position:relative;
   }
-  .deck-cursor{
-    display:inline-block;
-    width:2px;
-    background:var(--rust-bright);
-    margin-left:2px;
-    animation:blink 0.9s step-end infinite;
-  }
-  @keyframes blink{ 50%{ opacity:0; } }
   .hero .coords{
     margin-top:var(--space-m);
     font-family:'JetBrains Mono', monospace;
