@@ -166,9 +166,10 @@
   .hero-copy{ position:relative; max-width:72rem; }
   .hero h1{
     font-size:clamp(3.4rem, 2rem + 5.5vw, 7rem);
-    max-width:12ch;
+    max-width:none;
     line-height:0.95;
   }
+  .hero h1 .hero-line{ display:block; white-space:nowrap; }
   .hero h1 .pop{ color:var(--rust-bright); }
   .hero p.deck{
     margin-top:var(--space-m); max-width:62ch;
@@ -700,6 +701,39 @@
   footer .col .label{ margin-bottom:var(--space-xs); }
   footer .col a, footer .col p{ display:block; color:var(--stone-dim); font-size:0.95rem; margin-bottom:0.4rem; transition:color .2s ease; }
   footer .col a:hover{ color:var(--rust-bright); }
+  .footer-contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:0.45rem;
+    margin-top:var(--space-s);
+    max-width:30rem;
+  }
+  .footer-contact-form label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.66rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--sand);
+  }
+  .footer-contact-form input,
+  .footer-contact-form textarea{
+    width:100%;
+    padding:0.72rem 0.8rem;
+    margin-bottom:0.45rem;
+    border:1px solid var(--line);
+    border-radius:2px;
+    background:var(--charcoal-light);
+    color:var(--stone);
+    font:inherit;
+  }
+  .footer-contact-form textarea{ resize:vertical; min-height:7rem; }
+  .footer-contact-form input:focus,
+  .footer-contact-form textarea:focus{ outline:none; border-color:var(--rust-bright); }
+  .footer-contact-form .form-submit{ width:fit-content; margin-top:0.25rem; }
+  .form-honeypot{ position:absolute !important; left:-9999px !important; }
+  @media (max-width:520px){
+    .hero h1{ font-size:clamp(2.25rem, 10.5vw, 3.4rem); }
+  }
   footer .bottom{
     margin-top:var(--space-l); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;
     font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:var(--stone-dim); letter-spacing:0.08em;
