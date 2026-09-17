@@ -101,14 +101,12 @@
   .logo-lockup{
     display:block;
     width:clamp(9.5rem, 13vw, 11rem);
-    height:2.75rem;
-    overflow:hidden;
+    height:auto;
   }
   .logo-lockup img{
     display:block;
     width:100%;
     height:auto;
-    transform:translateY(-32.4%);
   }
   .logo-font{
     font-family:'Unbounded', sans-serif;
