@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>Gallery - Kumana</title>
-<meta name="description" content="A gallery of Kumana's work across architecture, urban design, event spaces, creative direction, and objects.">
+<title>Projects - Kumana</title>
+<meta name="description" content="Kumana projects across architecture, urban design, event spaces, creative direction, and objects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
@@ -23,10 +23,9 @@
       <a href="index.html#studio">Studio</a>
       <a href="index.html#vision">Vision</a>
       <a href="index.html#services">Services</a>
-      <a href="index.html#work">Work</a>
-      <a href="gallery.html" aria-current="page">Gallery</a>
-      <a href="index.html#thinking">Thinking</a>
-      <a href="index.html#collaborations">Collaborations</a>
+      <a href="gallery.html" aria-current="page">Projects</a>
+      <a href="index.html#thinking">Notes</a>
+      <a href="index.html#collaborations">Team</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -36,7 +35,7 @@
 
   <!-- GALLERY HERO -->
   <section class="gallery-hero wrap">
-    <span class="tag">Gallery</span>
+    <span class="tag">Projects</span>
     <h1 class="section-title">Every project, one place.</h1>
     <p style="color:var(--stone-dim); max-width:56ch; margin-top:var(--space-xs);">Filter by discipline, or browse everything at once. Click any project to step through its photos.</p>
 
@@ -61,16 +60,15 @@
       <div>
         <span class="label">Get in touch</span>
         <h2>Let's build something worth telling.</h2>
-        <p style="color:var(--stone-dim); max-width:44ch; margin-top:0.8rem;">Pick the option that fits - it opens your own email app with the right person already in the "to" field and the subject filled in. You write the message.</p>
+        <p style="color:var(--stone-dim); max-width:44ch; margin-top:0.8rem;">Choose the option that fits, complete the short form, and your message will be sent directly to Kumana.</p>
         <div class="cta-row" style="margin-top:var(--space-s); flex-direction:column; align-items:flex-start;">
-          <a class="cta-btn" href="mailto:clients@kumana.studio?subject=I%20want%20to%20become%20a%20client">I want to become a client</a>
-          <a class="cta-btn ghost" href="mailto:queries@kumana.studio?subject=I%20just%20have%20a%20question">I just have a question</a>
+          <button type="button" class="cta-btn" id="become-client-btn">I want to become a client</button>
+          <button type="button" class="cta-btn ghost" id="question-btn">I just have a question</button>
         </div>
       </div>
       <div class="col">
         <span class="label">Contact</span>
-        <a href="mailto:hello@kumana.studio">hello@kumana.studio</a>
-        <a href="tel:+27000000000">+27 00 000 0000</a>
+        <a href="tel:+27603138021">+27 60 313 8021</a>
       </div>
       <div class="col">
         <span class="label">Studio</span>
@@ -86,6 +84,71 @@
   </footer>
 
 </main>
+
+<!-- CONTACT MODALS -->
+<div class="modal-overlay" id="client-modal-overlay" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="client-modal-title">
+    <button type="button" class="modal-close" id="client-modal-close" aria-label="Close form">&times;</button>
+    <span class="label">New enquiry</span>
+    <h2 id="client-modal-title" class="section-title modal-title">Tell us about your project.</h2>
+    <p style="color:var(--stone-dim); max-width:52ch; margin-bottom:var(--space-m);">Share the essentials below and your enquiry will be sent directly to Kumana.</p>
+    <form id="client-form" novalidate>
+      <div class="form-row-2">
+        <div class="form-field"><label for="cf-name">Name</label><input type="text" id="cf-name" name="name" autocomplete="given-name" required></div>
+        <div class="form-field"><label for="cf-surname">Surname</label><input type="text" id="cf-surname" name="surname" autocomplete="family-name" required></div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-field"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" autocomplete="email" required></div>
+        <div class="form-field"><label for="cf-whatsapp">WhatsApp number</label><input type="tel" id="cf-whatsapp" name="whatsapp" placeholder="+27 XX XXX XXXX" autocomplete="tel" required></div>
+      </div>
+      <div class="form-field">
+        <label id="cf-project-type-label">Project type</label>
+        <div class="quick-picks" data-group="project-type" role="group" aria-labelledby="cf-project-type-label">
+          <button type="button" class="quick-pick" data-value="New Build" aria-pressed="false">New Build</button>
+          <button type="button" class="quick-pick" data-value="Addition / Renovation" aria-pressed="false">Addition / Renovation</button>
+        </div>
+      </div>
+      <div class="form-field">
+        <label id="cf-discipline-label">Discipline</label>
+        <div class="quick-picks" data-group="discipline" role="group" aria-labelledby="cf-discipline-label">
+          <button type="button" class="quick-pick" data-value="Architecture &amp; Spatial Design" aria-pressed="false">Architecture &amp; Spatial Design</button>
+          <button type="button" class="quick-pick" data-value="Spatial Experience Design" aria-pressed="false">Spatial Experience Design</button>
+          <button type="button" class="quick-pick" data-value="Event Space Design" aria-pressed="false">Event Space Design</button>
+          <button type="button" class="quick-pick" data-value="Urban &amp; Public Space Thinking" aria-pressed="false">Urban &amp; Public Space Thinking</button>
+          <button type="button" class="quick-pick" data-value="Creative Direction &amp; Concept Design" aria-pressed="false">Creative Direction &amp; Concept Design</button>
+          <button type="button" class="quick-pick" data-value="Furniture, Objects &amp; Installations" aria-pressed="false">Furniture, Objects &amp; Installations</button>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="cf-location">Project location</label>
+        <select id="cf-location" name="location" required>
+          <option value="" disabled selected>Select a province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option><option>Outside South Africa</option>
+        </select>
+      </div>
+      <button type="submit" class="form-submit">Send enquiry →</button>
+      <p class="form-status" id="cf-status" role="status"></p>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="question-modal-overlay" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="question-modal-title">
+    <button type="button" class="modal-close" id="question-modal-close" aria-label="Close form">&times;</button>
+    <span class="label">General enquiry</span>
+    <h2 id="question-modal-title" class="section-title modal-title">What would you like to ask?</h2>
+    <p style="color:var(--stone-dim); max-width:52ch; margin-bottom:var(--space-m);">Send your question directly to Kumana and we will get back to you.</p>
+    <form id="question-form" novalidate>
+      <div class="form-row-2">
+        <div class="form-field"><label for="qf-name">Name</label><input type="text" id="qf-name" name="name" autocomplete="name" required></div>
+        <div class="form-field"><label for="qf-email">Email</label><input type="email" id="qf-email" name="email" autocomplete="email" required></div>
+      </div>
+      <div class="form-field"><label for="qf-subject">Subject</label><input type="text" id="qf-subject" name="subject" required></div>
+      <div class="form-field"><label for="qf-message">Question</label><textarea id="qf-message" name="message" rows="5" required></textarea></div>
+      <button type="submit" class="form-submit">Send question →</button>
+      <p class="form-status" id="qf-status" role="status"></p>
+    </form>
+  </div>
+</div>
 
 <!-- LIGHTBOX (populated by gallery.js) -->
 <div class="lightbox" id="lightbox" aria-hidden="true">

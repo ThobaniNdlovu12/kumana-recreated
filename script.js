@@ -283,6 +283,87 @@
 })();
 
 
+// ================= GENERAL QUESTION — MODAL FORM =================
+(function(){
+  const overlay  = document.getElementById('question-modal-overlay');
+  const openBtn  = document.getElementById('question-btn');
+  const closeBtn = document.getElementById('question-modal-close');
+  const form     = document.getElementById('question-form');
+  const status   = document.getElementById('qf-status');
+  if(!overlay || !openBtn || !closeBtn || !form || !status) return;
+
+  let lastFocused = null;
+
+  function openModal(){
+    lastFocused = document.activeElement;
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    form.querySelector('#qf-name')?.focus();
+  }
+
+  function closeModal(){
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+    lastFocused?.focus();
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (event) => {
+    if(event.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && !overlay.hidden) closeModal();
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const name = form.querySelector('#qf-name').value.trim();
+    const email = form.querySelector('#qf-email').value.trim();
+    const subject = form.querySelector('#qf-subject').value.trim();
+    const message = form.querySelector('#qf-message').value.trim();
+
+    if(!name || !email || !subject || !message || !form.checkValidity()){
+      status.textContent = 'Please complete every field with a valid email address.';
+      status.className = 'form-status err';
+      return;
+    }
+
+    const submitBtn = form.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    status.textContent = 'Sending…';
+    status.className = 'form-status sending';
+
+    const data = new FormData();
+    data.append('name', name);
+    data.append('email', email);
+    data.append('subject', subject);
+    data.append('message', message);
+    data.append('_subject', `General Kumana enquiry — ${subject}`);
+
+    fetch('https://formspree.io/f/mkodolvd', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    })
+      .then(response => {
+        if(!response.ok) throw new Error('Unable to send');
+        status.textContent = 'Thanks — your question has been sent. We\'ll get back to you soon.';
+        status.className = 'form-status ok';
+        form.reset();
+      })
+      .catch(() => {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.className = 'form-status err';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+      });
+  });
+})();
+
+
 // ================= VISION — random photo-tile zoom =================
 // Every so often, one random tile in the background collage briefly zooms
 // in, giving the collage a subtle sense of life without any real photos yet.

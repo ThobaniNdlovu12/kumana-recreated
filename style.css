@@ -498,6 +498,7 @@
   }
   .form-status.ok{ color:var(--rust-bright); display:block; }
   .form-status.err{ color:#c96a5c; display:block; }
+  .form-status.sending{ color:var(--stone-dim); display:block; }
   .quick-picks{ display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:var(--space-m); }
   .quick-pick{
     padding:0.6rem 1rem;
