@@ -645,6 +645,22 @@
   .thinking-item h4{ font-family:'Bricolage Grotesque', sans-serif; font-size:1.05rem; margin-bottom:0.2rem; }
   .thinking-item p{ color:var(--stone-dim); font-size:0.93rem; max-width:52ch; }
 
+  /* Team introduction aligns with the Notes article-label column. */
+  .team-intro{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:var(--space-m);
+    padding-bottom:var(--space-s);
+  }
+  .team-intro p{
+    grid-column:2;
+    color:var(--stone-dim);
+    max-width:56ch;
+  }
+  @media (max-width:760px){
+    .team-intro{ display:block; }
+  }
+
   /* ================= COLLABORATIONS — gray hatch panel ================= */
   .collab{
     background:var(--charcoal-light);
