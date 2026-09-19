@@ -423,11 +423,12 @@
   }
   .enquire:hover{ border-color: var(--rust-bright); gap: 0.6rem; }
 
-  @media (max-width:1200px){
-    .carousel-outer{ width:100%; padding-right:var(--space-s); }
-  }
   @media (max-width:900px){
-    .carousel-outer{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    .carousel-outer{
+      width:100%;
+      padding-right:var(--space-s);
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
     .svc-card{ height:300px; }
   }
   @media (max-width:560px){
