@@ -174,11 +174,11 @@
 // ================= BECOME A CLIENT — MODAL FORM =================
 (function(){
   const overlay  = document.getElementById('client-modal-overlay');
-  const openBtn  = document.getElementById('become-client-btn');
+  const openBtns = document.querySelectorAll('[data-open-client-modal]');
   const closeBtn = document.getElementById('client-modal-close');
   const form     = document.getElementById('client-form');
   const status   = document.getElementById('cf-status');
-  if(!overlay || !openBtn || !form) return;
+  if(!overlay || !openBtns.length || !closeBtn || !form || !status) return;
 
   let lastFocused = null;
 
@@ -196,7 +196,7 @@
     if(lastFocused) lastFocused.focus();
   }
 
-  openBtn.addEventListener('click', openModal);
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
   document.addEventListener('keydown', (e) => {
