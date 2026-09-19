@@ -304,7 +304,10 @@
     display:grid;
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:0.75rem;
-    padding:0 var(--space-s);
+    width:75%;
+    max-width:1400px;
+    padding:0 0 0 var(--space-s);
+    margin-right:auto;
   }
 .carousel-btn{
   background:transparent;
@@ -321,7 +324,7 @@
   /* Cards */
   .svc-card{
     min-width:0;
-    height:clamp(260px,32vh,320px);
+    height:270px;
     background-color:#1e1d1b;
     background-image:var(--card-bg);
     background-size:cover;
@@ -420,6 +423,9 @@
   }
   .enquire:hover{ border-color: var(--rust-bright); gap: 0.6rem; }
 
+  @media (max-width:1200px){
+    .carousel-outer{ width:100%; padding-right:var(--space-s); }
+  }
   @media (max-width:900px){
     .carousel-outer{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
     .svc-card{ height:300px; }
