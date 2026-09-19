@@ -593,8 +593,9 @@
     display:grid;
     grid-template-columns:repeat(3, minmax(0, 1fr));
     gap:0.75rem;
-    width:75vw;
+    width:calc(75vw - 0.75rem);
     max-width:1400px;
+    padding-left:var(--space-s);
     margin-top:var(--space-m);
   }
   @media (max-width:900px){
