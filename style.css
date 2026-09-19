@@ -633,7 +633,13 @@
   .thinking-item{
     display:grid; grid-template-columns:120px 1fr; gap:var(--space-s);
     padding-bottom:var(--space-s); border-bottom:1px solid var(--line);
+    color:inherit; text-decoration:none;
   }
+  .thinking-item h4,
+  .thinking-item p{ transition:color .2s ease; }
+  .thinking-item:hover h4,
+  .thinking-item:focus-visible h4{ color:var(--rust-bright); }
+  .thinking-item:focus-visible{ outline:2px solid var(--rust-bright); outline-offset:6px; }
   @media (max-width:600px){ .thinking-item{ grid-template-columns:1fr; gap:0.3rem; } }
   .thinking-item .t-tag{ font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:var(--sand); text-transform:uppercase; letter-spacing:0.08em; }
   .thinking-item h4{ font-family:'Bricolage Grotesque', sans-serif; font-size:1.05rem; margin-bottom:0.2rem; }
