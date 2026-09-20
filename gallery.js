@@ -5,44 +5,44 @@
 // name new photos like that so it's obvious which project/order they belong to.
 const PROJECTS = [
   {
-    id: 'arc-01',
+    id: 'arc-res2601',
     category: 'arc',
-    code: 'ARC / 01',
-    title: 'Project title',
-    meta: 'Residential - Coming soon',
-    images: ['images/arc-01-modern-residence.jpg']
+    code: 'ARC / RES2601',
+    title: 'Residence Malevu',
+    meta: 'Rural, KwaZulu-Natal',
+    images: ['images/arc-res2601-Residence-Malevu.jpg']
   },
   {
-    id: 'urb-02',
-    category: 'urb',
-    code: 'URB / 02',
-    title: 'Project title',
-    meta: 'Urban / Public - Coming soon',
-    images: ['images/urb-02-discovery-church.jpg']
+    id: 'arc-res2602',
+    category: 'arc',
+    code: 'ARC / RES2602',
+    title: 'Residence Dladla',
+    meta: 'Pietermaritzburg, KwaZulu-Natal',
+    images: ['images/arc-res2602-Residence-Dladla.jpg']
   },
   {
-    id: 'evt-03',
-    category: 'evt',
-    code: 'EVT / 03',
-    title: 'Project title',
-    meta: 'Event Space - Coming soon',
-    images: ['images/evt-03-durban-sands.jpg']
+    id: 'arc-com2603',
+    category: 'arc',
+    code: 'ARC / COM2603',
+    title: 'Durban Sands Restaurant',
+    meta: 'Durban, KwaZulu-Natal',
+    images: ['images/arc-com2603-durban-sands.jpg']
   },
   {
-    id: 'dir-04',
-    category: 'dir',
-    code: 'DIR / 04',
-    title: 'New work coming soon',
-    meta: 'Creative Direction',
-    images: []
+    id: 'arc-res2604',
+    category: 'arc',
+    code: 'ARC / RES2604',
+    title: 'Residence Makhaye',
+    meta: 'Ballito, KwaZulu-Natal',
+    images: ['images/arc-res2604-Residence-Makhaye.jpg']
   },
   {
-    id: 'obj-05',
-    category: 'obj',
-    code: 'OBJ / 05',
-    title: 'New work coming soon',
-    meta: 'Furniture & Objects',
-    images: []
+    id: 'arc-res2605',
+    category: 'arc',
+    code: 'ARC / RES2605',
+    title: 'Residence Shezi',
+    meta: 'Kloof, KwaZulu-Natal',
+    images: ['images/arc-res2605-Residence-Shezi.jpg']
   }
 ];
 
