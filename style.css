@@ -679,8 +679,8 @@
     padding-top:var(--space-s);
   }
   #collaborations.legend-section .legend-grid{
-    grid-template-columns:140px 1fr;
-    gap:var(--space-l);
+    grid-template-columns:80px 1fr;
+    gap:var(--space-m);
   }
   @media (max-width:760px){
     #collaborations.legend-section .legend-grid{ grid-template-columns:1fr; gap:var(--space-s); }
