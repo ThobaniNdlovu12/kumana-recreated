@@ -5,12 +5,36 @@
 // name new photos like that so it's obvious which project/order they belong to.
 const PROJECTS = [
   {
+    id: 'arc-res2604',
+    category: 'arc',
+    code: 'ARC / RES2604',
+    title: 'Residence Makhaye',
+    meta: 'Ballito, KwaZulu-Natal',
+    images: ['images/arc-res2604-Residence-Makhaye.jpg']
+  },
+  {
     id: 'arc-res2601',
     category: 'arc',
     code: 'ARC / RES2601',
     title: 'Residence Malevu',
     meta: 'Rural, KwaZulu-Natal',
     images: ['images/arc-res2601-Residence-Malevu.jpg']
+  },
+  {
+    id: 'arc-res2605',
+    category: 'arc',
+    code: 'ARC / RES2605',
+    title: 'Residence Shezi',
+    meta: 'Kloof, KwaZulu-Natal',
+    images: ['images/arc-res2605-Residence-Shezi.jpg']
+  },
+  {
+    id: 'arc-pow2602',
+    category: 'arc',
+    code: 'ARC / POW2602',
+    title: 'Discovery Church',
+    meta: 'Community & Worship Space',
+    images: ['images/arc-pow2602-Discovery-church.jpg']
   },
   {
     id: 'arc-res2602',
@@ -29,52 +53,28 @@ const PROJECTS = [
     images: ['images/arc-com2603-durban-sands.jpg']
   },
   {
+    id: 'arc-res2606',
+    category: 'arc',
+    code: 'ARC / RES2606',
+    title: 'Residence Mapholoba',
+    meta: 'Hillcrest, KwaZulu-Natal',
+    images: ['images/arc-res2606-Residence-Mapholoba.jpg']
+  },
+  {
     id: 'arc-com2604',
     category: 'arc',
     code: 'ARC / COM2604',
     title: 'Senorita Mother & Child International Clinic',
-    meta: 'Commercial Interior',
-    images: ['images/arc-com2603-Senorita-Mother-&-child-international-clinic.jpg']
-  },
-  {
-    id: 'arc-pow2602',
-    category: 'arc',
-    code: 'ARC / POW2602',
-    title: 'Discovery Church',
-    meta: 'Community & Worship Space',
-    images: ['images/arc-pow2602-Discovery-church.jpg']
+    meta: '159 10th Avenue, Morningside, Durban',
+    images: ['images/arc-com2604-Senorita-Clinic.jpg']
   },
   {
     id: 'arc-esd2607',
     category: 'evt',
     code: 'ARC / ESD2607',
     title: 'TEDxDurban Summit',
-    meta: 'Event Space Design',
+    meta: 'Umhlanga, KwaZulu-Natal',
     images: ['images/arc-esd2607-TEDxDurban-Summit.jpg']
-  },
-  {
-    id: 'arc-study01',
-    category: 'arc',
-    code: 'ARC / STUDY01',
-    title: 'Spatial Courtyard Study',
-    meta: 'Architecture & Spatial Design',
-    images: ['images/arc-bg.jpg']
-  },
-  {
-    id: 'arc-res2604',
-    category: 'arc',
-    code: 'ARC / RES2604',
-    title: 'Residence Makhaye',
-    meta: 'Ballito, KwaZulu-Natal',
-    images: ['images/arc-res2604-Residence-Makhaye.jpg']
-  },
-  {
-    id: 'arc-res2605',
-    category: 'arc',
-    code: 'ARC / RES2605',
-    title: 'Residence Shezi',
-    meta: 'Kloof, KwaZulu-Natal',
-    images: ['images/arc-res2605-Residence-Shezi.jpg']
   }
 ];
 
