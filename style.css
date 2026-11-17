@@ -163,9 +163,9 @@
     background:linear-gradient(180deg, rgba(28,27,25,0.55) 0%, rgba(28,27,25,0.75) 55%, rgba(28,27,25,0.92) 100%);
   }
 
-  .hero-copy{ position:relative; max-width:72rem; }
+  .hero-copy{ position:relative; max-width:72rem; container-type:inline-size; }
   .hero h1{
-    font-size:clamp(3.4rem, 2rem + 5.5vw, 7rem);
+    font-size:clamp(1rem, 7.4cqw, 5.5rem);
     max-width:none;
     line-height:0.95;
   }
@@ -766,9 +766,6 @@
   .footer-contact-form textarea:focus{ outline:none; border-color:var(--rust-bright); }
   .footer-contact-form .form-submit{ width:fit-content; margin-top:0.25rem; }
   .form-honeypot{ position:absolute !important; left:-9999px !important; }
-  @media (max-width:520px){
-    .hero h1{ font-size:clamp(2.25rem, 10.5vw, 3.4rem); }
-  }
   footer .bottom{
     margin-top:var(--space-l); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;
     font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:var(--stone-dim); letter-spacing:0.08em;
