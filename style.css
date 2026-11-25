@@ -163,6 +163,7 @@
     background:linear-gradient(180deg, rgba(28,27,25,0.55) 0%, rgba(28,27,25,0.75) 55%, rgba(28,27,25,0.92) 100%);
   }
 
+  .hero > .wrap{ width:100%; }
   .hero-copy{ position:relative; max-width:72rem; container-type:inline-size; }
   .hero h1{
     font-size:clamp(1rem, 7.4cqw, 5.5rem);
